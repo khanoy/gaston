@@ -1,6 +1,4 @@
-body{
-	background-color: red;
-}
-main {
-	
-}
+@import "reset";
+@import "mixin";
+@import "base";
+@import "header";

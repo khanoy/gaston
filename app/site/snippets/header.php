@@ -16,9 +16,15 @@
 
 	<header <?php if($page->couleur() != ""): ?>style="background-color: #<?php $page->couleur() ?>;<?php endif ?> <?php if($page->hasImages()): ?>background-image: url(<?php $page->images()->first()->url() ?>);"<?php endif ?>>
 	
-		<h1>
+		<h1 id="logo">
 			
-			<img src="assets/images/logo.svg" title="<?php echo $site->title() ?>">
+			<img src="assets/images/silvytruchon.svg" title="<?php echo $site->title() ?>">
+			
+		</h1>
+		
+		<h1 id="icon">
+			
+			<img src="assets/images/silvytruchon.svg" title="<?php echo $site->title() ?>">
 			
 		</h1>
 		

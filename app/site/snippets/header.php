@@ -14,24 +14,22 @@
 </head>
 <body>
 
-	<header <?php if($page->couleur() != ""): ?>style="background-color: #<?php $page->couleur() ?>;<?php endif ?> <?php if($page->hasImages()): ?>background-image: url(<?php $page->images()->first()->url() ?>);"<?php endif ?>>
-	
-		<h1 id="logo">
-			
-			<img src="assets/images/silvytruchon.svg" title="<?php echo $site->title() ?>">
-			
-		</h1>
+	<header>
 		
 		<h1 id="icon">
 			
-			<img src="assets/images/silvytruchon.svg" title="<?php echo $site->title() ?>">
+			<img src="assets/images/silvytruchon-icon.svg" title="<?php echo $site->title() ?>">
 			
 		</h1>
 		
-		<?php foreach($page->children()->visible() as $section): ?>
+		<nav class="menu">
 		
-			<a id="nav-item-<?php $section->uid() ?>" class="nav-item nav-item-<?php $section->template() ?>"><?php $section->title() ?></a>
+  		<?php foreach($page->children()->visible() as $section): ?>
+  		
+  			<a id="nav-item-<?php $section->uid() ?>" class="nav-item nav-item-<?php $section->template() ?>"><?php $section->title() ?></a>
+  		
+  		<?php endforeach ?>
 		
-		<?php endforeach ?>
+		</nav>
 	
 	</header>

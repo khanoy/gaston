@@ -7,5 +7,4 @@ password: >
 language: fr
 role: admin
 history:
-  - home/art/hibou-1
   - home

@@ -1,0 +1,29 @@
+.more {
+	position: relative;
+  display: inline-block;
+  font: 500 em(18px)/1 $main_font;
+  text-transform: uppercase;
+  border-bottom: none;
+  vertical-align: middle;
+  &:before {
+	  content: "";
+		display: inline-block;
+		width: rem(45);
+		height: 2px;
+		margin-right: 10px;
+		background-color: $main_color;
+		vertical-align: middle;
+		@extend %transition;
+  }
+  &:hover {
+	  border-bottom: none;
+  }
+}
+.content-text {
+	.more {
+		border-bottom: none;
+		&:hover {
+		  border-bottom: none;
+	  }
+	}
+}

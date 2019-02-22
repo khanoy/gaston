@@ -1,0 +1,68 @@
+section {
+	position: relative;
+	@include padding($padding*2, 0, $padding*2, 0);
+	@include background-cover();
+}
+.template-container {
+	position: relative;
+	padding: padding_vw($padding) padding_vw($padding) 0 padding_vw($padding);
+	z-index: 2;
+	@include max-width(640px) {
+		padding: padding_vw($padding) padding_vw($padding) 0 padding_vw($padding);
+	}
+}
+.box {
+	background-color: $white;
+	transition: background-color $transition_time $niceease;
+}
+.background {
+	position: fixed;
+	top: -100px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	@include background-cover();
+	z-index: 1;
+}
+.container {
+	position: relative;
+	width: 100%;
+	max-width: #{$container_mw};
+	@include padding(0, $padding, 0, $padding);
+  margin: 0 auto;
+}
+.overflow {
+	overflow: hidden;
+	main, footer, .infolettre, .banner {
+		opacity: 0;
+	}
+	.box {
+		background-color: transparent;
+	}
+}
+.overlay {
+	background-color: rgba($black, 0.8);
+}
+main {
+	background-color: $white;
+}
+main, header, footer, .infolettre, .banner {
+	opacity: 0;
+	transition: opacity $transition_time $niceease;
+}
+// Float n stuff
+.clear,
+.clearfix,
+%clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.left { float: left }
+.right { float: right; }

@@ -1,0 +1,47 @@
+.section {
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		visibility: hidden;
+	}
+	.container {
+		position: relative;
+		z-index: 1;
+	}
+	&.pos-center {
+		text-align: center;
+		@include max-width(800px) {
+			text-align: left;
+		}
+		[class*='cols-'] {
+			justify-content: center;
+			@include max-width(800px) {
+				justify-content: flex-start;
+			}
+		}
+	}
+	&.pos-right {
+		[class*='cols-'] {
+			justify-content: flex-end;
+			@include max-width(800px) {
+				justify-content: flex-start;
+			}
+		}
+	}
+	.links {
+		a {
+			@include margin($padding, 0, $padding, 0);
+		}	
+	}
+	.subsection {
+		@include margin-bottom($padding);
+		&:last-child {
+			@include margin-bottom(0);
+		}
+	}
+}

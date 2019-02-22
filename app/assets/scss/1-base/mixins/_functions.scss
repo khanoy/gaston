@@ -1,0 +1,15 @@
+// STRIP UNITS
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1)
+}
+
+// PX to EM
+@function em($pixels, $context: $font_size) {
+  @return #{strip-unit($pixels/$context)}em
+}
+
+// PX to REM
+// divide by 16
+@function rem($pixels) {
+  @return #{strip-unit($pixels/$font_size)}rem
+}

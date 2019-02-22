@@ -9,10 +9,12 @@ var concat = require('gulp-concat');
 var replace = require('gulp-html-replace');
 var uglify = require('gulp-uglify');
 var gulp = require('gulp-run-seq');
+var compass = require('gulp-compass');
 
 // Fonction de compilation des fichiers scss
 gulp.task('sass', function(){
   return gulp.src('app/assets/scss/**/*.scss')
+  .pipe(sass({ compass: true, sourcemap: true, style: 'compressed' }))
     .pipe(plumber({
         errorHandler: function (err) {
             console.log(err);
@@ -71,7 +73,7 @@ gulp.task('release', [['swag', 'magic', 'compress']], function() {
 gulp.task('browserSync', function() {
   browserSync({
     // URL de dev à changer ici (racine de l'application)
-    proxy: "localhost:8888/StarterKit/app"
+    proxy: "http://localhost:8888/kwecocktails/app"
   });
 })
 

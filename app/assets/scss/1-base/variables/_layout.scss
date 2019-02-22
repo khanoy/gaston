@@ -1,0 +1,4 @@
+$container_mw: 1920;
+$padding: 60;
+$container_padding: #{$padding/$container_mw*100}vw;
+$section_padding:  #{($padding*2)/$container_mw*100}vw;

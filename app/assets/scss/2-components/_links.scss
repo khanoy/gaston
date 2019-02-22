@@ -1,0 +1,20 @@
+a {
+	color: $main_color;
+	text-decoration: none;
+	cursor: pointer;
+	@extend %transition;
+	&:hover {
+		color: $main_color_hover;
+	}
+}
+[class*='productlink-'] {
+	&:after {
+		content: "\f07a ";
+		font-family: "FontAwesome";
+	}
+}
+.hover {
+	@include max-width(800px) {
+		display: none;
+	}
+}

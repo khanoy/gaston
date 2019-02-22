@@ -1,0 +1,21 @@
+footer {
+	position: relative;
+	min-height: 60px;
+	@include padding($padding, 0, $padding, 0);
+	font-size: em(18);
+	z-index: 1;
+	.credits {
+		position: absolute;
+		top: 50%;
+		right: padding_vw($padding);
+		transform: translate(10px, -50%);
+		@include max-width(800px) {
+			right: padding_vw($padding*2);
+		}
+		svg {
+			@include max-width(800px) {
+				width: 30px;
+			}
+		}
+	}
+}

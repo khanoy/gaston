@@ -1,0 +1,119 @@
+.banner {
+	position: relative;
+	display: flex;
+	align-items: center;
+	@include background-cover();
+	@include max-width(1024px) {
+		text-align: center;
+	}
+	.container {
+		position: initial;
+		z-index: 1;
+		@include max-width(800px) {
+			padding: 0;
+		}
+	}
+	.banner-content {
+		width: 66.66%;
+		@include max-width(1280px) {
+			width: 80%;
+		}@include max-width(1024px) {
+			width: 100%;
+		}
+	}
+	.banner-text {
+		display: inline-block;
+		text-align: center;
+	}
+	.banner-logo {
+		display: block;
+		margin: auto;
+		@include margin-bottom($padding/2);
+		max-width: 38.23%;
+		transform: translateY(-50px);
+		opacity: 0;
+		transition: transform 1.5s 0.5s ease, opacity 1.5s 0.5s ease;
+		&.animate {
+			opacity: 1;
+			transform: translateY(0);
+		}
+		@include max-width(1024px) {
+			max-width: 50%;
+			@include margin-bottom();
+		}
+	}
+	.banner-title {
+		line-height: 1.4;
+		span {
+			display: inline-block;
+			transform: translateY(-50px);
+			opacity: 0;
+			transition: transform 1.5s ease, opacity 1.5s ease;
+			@for $i from 1 through 12 {
+		    &:nth-child(#{$i}){
+		      transition-delay: #{($i / 10)}s;
+		    }	
+		  }
+		}
+		div:last-child {
+			display: block;
+			font-size: rem(143);
+			line-height: 0.7;
+		}
+		@include max-width(800px) {
+			font-size: 10vw;
+			div:last-child {
+				font-size: 1.55em;
+			}
+		}
+		&.animate {
+			span {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+	.banner-link {
+		transform: translateY(-50px);
+		opacity: 0;
+		transition: transform 1.5s 0.5s ease, opacity 1.5s 0.5s ease;
+		&.animate {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+	.banner-icon {
+		position: absolute;
+		top: padding_vw(-$padding);
+		right: padding_vw(-$padding);
+		bottom: padding_vw(-$padding);
+		width: 50%;
+		@include background-cover();
+		background-position: left center;
+		overflow: hidden;
+		transform: translateY(-100px);
+		transition: transform 2.5s ease;
+		&.animate {
+			transform: translateY(0);
+		}
+		@include max-width(1024px) {
+			position: relative;
+			width: 50%;
+			margin: auto;
+			top: inherit;
+			right: inherit;
+			bottom: inherit;
+			@include margin-bottom();
+		}
+		svg {
+			height: 100vh;
+			-moz-object-fit: cover;
+			-webkit-object-fit: cover;
+			object-fit: cover;
+			@include max-width(1024px) {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+}

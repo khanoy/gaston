@@ -1,0 +1,9 @@
+.home {
+	padding-top: 0;
+	.recettes {
+		background-color: $gray;
+	}
+	.recettes+.cta {
+		background-color: $white;
+	}
+}

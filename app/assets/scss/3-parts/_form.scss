@@ -1,0 +1,55 @@
+input:not([type=submit]),
+textarea {
+  display: block;
+  width: 100%;
+  color: black;
+  font: em(18)/1 $main_font;
+  padding: em($padding/3) em($padding/3);
+  @include margin-bottom($padding/3);
+  resize: none;
+  outline: none;
+  background: $white;
+  border: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  @extend %transition;
+  //@include input-placeholder { color: mix(white, $black, 15%); }
+}
+
+textarea {
+  height: 165px;
+  padding: em($padding/3) em($padding/3);
+}
+
+[type=submit] {
+  @extend .button;
+  float: right;
+  -webkit-appearance: none;
+  border-radius: 0;
+  &:hover {
+		background-color: mix(black, $gray, 15%);
+	}
+}
+form {
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+	.cols-2-full {
+		.col {
+			&:first-child() {
+				@include padding-right($padding/6);
+				@include max-width(1024px) {
+					@include padding-right(0);
+				}
+			}
+			&:last-child() {
+				@include padding-left($padding/6);
+				@include max-width(1024px) {
+					@include padding-left(0);
+				}
+			}
+		}
+	}
+}

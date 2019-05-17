@@ -71,7 +71,7 @@ gulp.task('release', [['swag', 'magic', 'compress']], function() {
 gulp.task('browserSync', function() {
   browserSync({
     // URL de dev à changer ici (racine de l'application)
-    proxy: "http://localhost:8888/base_kirby/app"
+    proxy: "http://localhost:8888/gaston/app"
   });
 })
 

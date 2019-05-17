@@ -1,0 +1,533 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+$yellow : #ffcd55;
+$bgdark: #1f1d1e;
+$light: #faf5e6;
+$dark: #151314;
+
+//font-family: 'Playfair Display', serif;
+//font-family: 'Open Sans', sans-serif;
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+a{
+	text-decoration: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.clr{
+	clear: both;
+	height: 0;
+	width: 0;
+}
+
+body{
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+	font-family: 'Open Sans', sans-serif;
+}
+i{
+	font-style: italic !important;
+}
+.wrap{
+	max-width: 1560px;
+	height: auto;
+	width: 100%;
+	margin: auto;
+	position: relative;
+  @media screen and (max-width: 1920px) {
+		max-width: 1280px;
+	}
+	@media screen and (max-width: 1440px) {
+		max-width: 960px;
+	}
+	@media screen and (max-width: 1024px) {
+		max-width: 100%;
+		padding: 0 10%;
+	}
+	@media screen and (max-width: 640px) {
+		
+	}
+	@media screen and (max-width: 320px) {
+		
+	}
+}
+.desktop{
+	@media screen and (min-width: 1025px) {
+		display: block;
+	}
+	@media screen and (max-width: 1024px) {
+		display: none;	
+	}
+}
+.mobile{
+	@media screen and (min-width: 1025px) {
+		display: none;
+	}
+	@media screen and (max-width: 1024px) {
+		display: block;	
+	}
+}
+.yellow{
+	color: $yellow !important;
+	font-weight: 600 !important;
+}
+h1{
+	font-size: 85px;
+	line-height: 75px;
+	text-transform: uppercase;
+	font-weight: 900;
+	font-family: 'Playfair Display', serif;
+	color: $light;
+	margin-bottom: 40px;
+	@media screen and (max-width: 1024px) {
+		font-size: 60px;
+		line-height: 55px;
+	}
+	@media screen and (max-width: 640px) {
+		font-size: 40px;
+		line-height: 35px;
+	}
+	@media screen and (max-width: 320px) {
+		font-size: 36px;
+		line-height: 34px;
+	}
+}
+h2{
+	font-size: 32px;
+	line-height: 42px;
+	color: #ffffff;
+	font-weight: 400;
+	margin-bottom: 25px;
+	@media screen and (max-width: 1024px) {
+		font-size: 24px;
+		line-height: 28px;
+	}
+}
+p.intro{
+	font-size: 22px;
+	line-height: 30px;
+	font-weight: 400;
+	margin-bottom: 25px;
+	@media screen and (max-width: 1024px) {
+		font-size: 18px;
+		line-height: 26px;
+	}
+}
+p{
+	font-weight: 100;
+	font-size: 18px;
+	line-height: 24px;
+	margin-bottom: 25px;
+	@media screen and (max-width: 1024px) {
+		font-size: 14px;
+		line-height: 20px;
+	}
+}
+.cta{
+	display: inline-block;
+	padding: 10px 22px;
+	border: 2px solid $yellow;
+	background: $yellow;
+	color: #000000;
+	font-weight: 700;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	text-transform: uppercase;
+	transition: all 0.3s;
+	outline: none;
+	cursor: pointer !important;
+	&:hover{
+		background: #1f1d1e;
+		color: $yellow;
+	}
+	@media screen and (max-width: 1024px) {
+		font-size: 14px;	
+	}
+}
+
+
+
+
+.header{
+	background-image: url(../images/gastondery-header-desktop.jpg);
+	background-size: 2150px auto;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: $bgdark;
+	@media screen and (max-width: 1440px) {
+		background-size: cover;	
+	}
+	@media screen and (max-width: 1024px) {
+		background-image: url(../images/gastondery-header-mobile.jpg);
+		background-size: 1000px auto;
+		background-position: center calc(100% - 50px);
+		padding-bottom: 400px;
+	}
+	@media screen and (max-width: 640px) {
+		background-size: 640px;
+		padding-bottom: 300px;
+	}
+	@media screen and (max-width: 320px) {
+		background-size: 500px;
+		padding-bottom: 200px;
+		background-position: center calc(100% - 25px);
+	}
+	.menu{
+		ul{
+			padding:25px 0;
+			li{
+				margin-right: 25px;
+				display: inline-block;
+				span{
+					color: #ffffff;
+					font-weight: 900;
+					text-transform: uppercase;
+					color: #ffffff;
+				}
+				a{
+					color: #ffffff;
+					font-weight: 400;
+					text-transform: uppercase;
+					transition: color 0.3s;
+					&:hover{
+						color: $yellow;
+					}
+					@media screen and (max-width: 1024px) {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	#toggle_menu{
+		color: #ffffff;
+		text-transform: uppercase;
+		font-weight: 600;
+		color: #ffffff;
+		position: absolute;
+		right: 10%;
+		top: 25px;
+		cursor: pointer;
+	}
+	.mobile-menu{
+		display: none;
+		text-align: center;
+		width: 100%;
+		border-bottom: 1px solid $yellow;
+		padding: 0 0 15px 0;
+		width: calc(120%);
+		height: auto;
+		position: relative;
+		margin-left: -10%;
+		&:open{
+			display: block;
+		}
+		ul li{
+			display: inline;
+			margin: 0 15px;
+			@media screen and (max-width: 440px) {
+				display: block;
+				margin: 5px 0;
+			}
+		}
+		a{
+			color: #ffffff;
+			text-transform: uppercase;
+			font-weight: 100;
+			margin-bottom: 5px;
+			display: inline-block;
+			outline: none;
+		}
+	}
+	.content{
+		padding: 125px 0;
+		max-width: 600px;
+		@media screen and (max-width: 1440px) {
+			max-width: 500px;	
+		}
+		@media screen and (max-width: 1024px) {
+			max-width: 100%;
+			padding: 75px 0 0 0;
+		}
+		@media screen and (max-width: 320px) {
+			padding: 50px 0 0 0;
+		}
+		p{
+			color: $light;
+		}
+		span{
+			color: $light;
+		}
+	}
+}
+
+#synopsis{
+	background-color: #f8f4e9;
+	color: $dark;
+	padding: 75px 0;
+	background-image: url(../images/gastondery-synopsis-desktop.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+	@media screen and (max-width: 1440px) {
+		background-size: 1700px;	
+	}
+	@media screen and (max-width: 1024px) {
+		background-image: url(../images/gastondery-synopsis-mobile.jpg);
+		background-position: bottom center;
+		padding-bottom: 600px;
+		background-size: 1024px;
+	}
+	@media screen and (max-width: 640px) {
+		background-size: 640px;
+		padding-bottom: 400px;
+	}
+	@media screen and (max-width: 320px) {
+		padding: 50px 0 250px 0;
+		background-size: 400px;
+	}
+	.content{
+		max-width: 500px;
+		@media screen and (max-width: 1440px) {
+			max-width: 450px;	
+		}
+		@media screen and (max-width: 1024px) {
+			width: 100%; 
+		}
+		h2{
+			color: $dark;
+		}
+		input{
+			border: 2px solid $yellow;
+			padding: 15px;
+			width: calc(100% - 30px);
+			background: transparent;
+			max-width: 300px;
+			margin-bottom: 15px;
+			font-size: 14px;
+			text-transform: uppercase;
+			font-weight: 700;
+			outline: none;
+			font-family: 'Open Sans', sans-serif;
+			&::placeholder { 
+				color: $dark !important;
+			}
+
+			&:-ms-input-placeholder {
+				color: $dark !important;
+			}
+
+			&::-ms-input-placeholder {
+				color: $dark !important;
+			}
+			&.gotcha{
+				position: absolute;
+				left: -99999px;
+			}
+			&[type=submit]{
+				background: $yellow;
+				width: auto;
+				padding: 10px 22px;
+				font-size: 16px;
+				color: #000000;
+				font-weight: 700;
+				cursor: pointer;
+				//font-family: 'Open Sans', sans-serif;
+				&:hover{
+					background: transparent;
+				}
+			}
+		}
+		.syn-form, .syn-text{
+			display: none;
+			&.visible{
+				display: block;
+			}
+		}
+	}
+	.cta{
+		margin-top: 15px;
+		&:hover{
+			background: #f8f4e9;
+			border-color: $dark;
+			color: $dark;
+		}
+	}
+	.back{
+		text-transform: uppercase;
+		font-weight: 700;
+		padding-left: 25px;
+		background: url(../images/back.svg) no-repeat left center;
+		background-size: 16px;
+		margin-top: 5px;
+	}
+}
+
+#about{
+	background-color: $bgdark;
+	background-image: url(../images/gastondery-about-desktop.jpg);
+	background-repeat: no-repeat;
+	background-size: 2000px;
+	background-position: calc(100% + 100px) top;
+	@media screen and (max-width: 1440px) {
+		background-position: calc(100% + 350px) top;	
+	}
+	@media screen and (max-width: 1024px) {
+		background-image: url(../images/gastondery-about-mobile.png);
+		background-position: bottom center;
+		padding-bottom: 500px;
+		background-size: 1024px;
+	}
+	@media screen and (max-width: 640px) {
+		background-size: 640px;
+		padding-bottom: 300px;
+	}
+	@media screen and (max-width: 320px) {
+		background-size: 400px;
+		padding: 50px 0 200px 0;
+	}
+	.content{
+		padding: 125px 0 150px 0;
+		max-width: 500px;
+		@media screen and (max-width: 1440px) {
+			max-width: 400px;	
+		}
+		@media screen and (max-width: 1024px) {
+			padding-top: 75px;	
+			max-width: 100%;
+		}
+		@media screen and (max-width: 320px) {
+			padding-top: 0px;	
+		}
+		p{
+			color: $light;
+			font-weight: 400;
+		}
+		span{
+			color: $light;
+		}
+		a{
+			color: $yellow;
+		}
+		ul{
+			li{
+				display: block;
+				padding-left: 25px;
+				list-style-type: none;
+				background-image: url(../images/685-gastondery-icones-01.svg);
+				background-repeat: no-repeat;
+				background-position: left center;
+				background-size: 16px;
+				margin: 7.5px 0;
+				text-transform: uppercase;
+				font-weight: 700;
+				transition: opacity 0.3s;
+				max-width: 260px;
+				cursor: pointer;
+				a{
+					color: $yellow;
+				}
+				&:hover, &.active{
+					opacity: 0.3;
+				}
+				@media screen and (max-width: 320px) {
+					font-size: 12px;
+					line-height: 18px;
+				}
+			}
+		}
+		.external{
+			display: inline-block;
+			padding-left: 25px;
+			background-image: url(../images/685-gastondery-icones-02.svg);
+			background-repeat: no-repeat;
+			background-position: left center;
+			background-size: 16px;
+			text-transform: uppercase;
+			color: #ffffff;
+			margin-top: 5px;
+			transition: color 0.3s;
+			font-size: 16px;
+			&:hover{
+				color: $yellow;
+			}
+			@media screen and (max-width: 1024px) {
+				font-size: 12px;
+				line-height: 18px;
+			}
+		}
+		#toggle{
+			padding-top: 75px;
+			@media screen and (max-width: 1024px) {
+				padding-top: 50px;	
+			}
+			@media screen and (max-width: 320px) {
+				padding-top: 25px;	
+			}
+			.toggle{
+				display: none;
+				&.visible{
+					display: block;
+				}
+			}
+		}
+	}
+	.credit{
+		display: block;
+		position: absolute;
+		bottom: 30px;
+		left:0;
+		height: auto;
+		width: auto;
+		img{
+			width: 30px;
+		}
+		@media screen and (max-width: 1024px) {
+			left: 10%;	
+		}
+	}
+}

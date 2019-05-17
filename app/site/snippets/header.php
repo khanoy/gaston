@@ -1,35 +1,31 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	
-	<title><?php echo $site->title()->html() ?> | <?php echo $page->title()->html() ?></title>
-	<meta name="description" content="<?php echo $site->description()->html() ?>">
-	<meta name="keywords" content="<?php echo $site->keywords()->html() ?>">
-	
-	<?php echo css('assets/css/main.css') ?>
-
-</head>
-<body>
-
-	<header>
+<div class="header">
+	<div class="wrap">
 		
-		<h1 id="icon">
+		
+			<div class="menu">
+				<ul>
+					<li><span>Gastondery<span class="yellow">.com</span></span></li>
+					<li><a href="#synopsis">La conférence</a></li>
+					<li><a href="#about" class="toggle_gaston">Gaston</a></li>
+					<li><a href="#about" class="toggle_coord">Coordonnées</a></li>
+				</ul>
+			</div>
+			<span class="mobile" id="toggle_menu">Menu</span>
+			<div class="mobile-menu">
+				<ul>
+					<li><a href="#synopsis">La conférence</a></li>
+					<li><a href="#about" class="toggle_gaston">Gaston</a></li>
+					<li><a href="#about" class="toggle_coord">Coordonnées</a></li>
+				</ul>
+			</div>
 			
-			<img src="assets/images/silvytruchon-icon.svg" title="<?php echo $site->title() ?>">
-			
-		</h1>
+			<div class="content">
+				<h1>L'héritage<br>d'un père</h1>
+				<p class="intro">Une conférence inspirante... Un récit touchant qui change nos perceptions, notre vie. Stanislas et Peter, l’un Canadien, l’autre Allemand, deux ennemis devenus amis. Une histoire d’amitié et d’humanité.</p>
+				<p>Une conférence de <span class="yellow">Gaston Déry</span></p><br>
+				<a href="#synopsis" class="cta">En savoir plus</a>
+			</div>
+
 		
-		<nav class="menu">
-		
-  		<?php foreach($page->children()->visible() as $section): ?>
-  		
-  			<a id="nav-item-<?php $section->uid() ?>" class="nav-item nav-item-<?php $section->template() ?>"><?php $section->title() ?></a>
-  		
-  		<?php endforeach ?>
-		
-		</nav>
-	
-	</header>
+	</div>
+</div>
